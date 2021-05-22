@@ -35,7 +35,7 @@ app.post('/math/:operation', parseAB, (req, res) => {
   } else if (operation === 'divide') {
     answer = a / b;
   }
-  History.save({ a, b, operation, answer })
+  History.save(a, b, operation, answer)
     .then(() => {
       res.status(201).json({ answer });
     })
