@@ -12,6 +12,7 @@
   const numB = document.getElementById('numB');
   const selectOp = document.getElementById('select-op');
   const mathForm = document.getElementById('math-form');
+  const answerSpan = document.getElementById('answer');
 
   function initialize() {
     getHistory();
@@ -45,7 +46,9 @@
       body: JSON.stringify(body),
     };
     fetch(URL + '/math/' + selectOp.value, options)
-      .then(() => {
+      .then(response => response.json())
+      .then(({answer}) => {
+        answerSpan.innerText = answer;
         getHistory();
       })
       .catch((err) => {
@@ -54,8 +57,9 @@
   }
 
   function renderHistory(history) {
+    let tableBody = document.getElementById('history-body');
+    tableBody.innerHTML = '';
     history.forEach(({ a, b, operation, answer }) => {
-      let tableBody = document.getElementById('history-body');
       let row = document.createElement('tr');
       let colA = document.createElement('td');
       colA.innerText = a;
