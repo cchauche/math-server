@@ -4,7 +4,8 @@
   "description": "Express server practice project",
   "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/index.js",
+    "start-dev": "nodemon --inspect server/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/cchauche/math-server/issues"
   },
-  "homepage": "https://github.com/cchauche/math-server#readme"
+  "homepage": "https://github.com/cchauche/math-server#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
