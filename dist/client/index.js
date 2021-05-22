@@ -1,3 +1,4 @@
+{
 'use strict';
 
 const URL = 'http://localhost:3000';
@@ -7,14 +8,18 @@ const sampleData = [
   { a: 2, b: 5, operation: 'multiply', answer: 10 },
 ];
 
-// Initialize app
+const numA = document.getElementById('numA');
+const numB = document.getElementById('numB');
+const selectOp = document.getElementById('select-op');
+const mathForm = document.getElementById('math-form');
+
+
 function initialize() {
-  // Get history
   getHistory();
-  // Add listener to submit button
+  mathForm.addEventListener('submit', handleSubmit)
 }
 
-// Get history function
+
 function getHistory() {
   fetch(URL + '/history').then((response) => {
     data = response.json();
@@ -25,8 +30,26 @@ function getHistory() {
   });
 }
 
-// handle Submit function
-function handleSubmit() {}
+function handleSubmit(event) {
+  event.preventDefault();
+  let body = {
+    a: numA.value,
+    b: numB.value
+  };
+  let options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    mode: 'cors',
+    body: JSON.stringify(body)
+  }
+  fetch(URL + '/math/' + selectOp.value, options ).then(() => {
+    getHistory()
+  }).catch(err => {
+    console.error(err)
+  })
+}
 
 function renderHistory(history) {
   history.forEach(({ a, b, operation, answer }) => {
@@ -46,3 +69,5 @@ function renderHistory(history) {
 }
 
 initialize();
+
+}

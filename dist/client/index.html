@@ -8,19 +8,19 @@
 </head>
 <body>
   <h1>Hedge Math</h1>
-  <form>
+  <form id="math-form">
     <label> A
-      <input type="number">
+      <input type="number" id="numA" required>
     </label>
     <label> B
-      <input type="number">
+      <input type="number" id="numB" required>
     </label>
     <label> Operation
-      <select>
-        <option>Add</option>
-        <option>Subtract</option>
-        <option>Multiply</option>
-        <option>Divide</option>
+      <select id="select-op">
+        <option value="add">Add</option>
+        <option value="subtract">Subtract</option>
+        <option value="multiply">Multiply</option>
+        <option value="divide">Divide</option>
       </select>
     </label>
     <label>
