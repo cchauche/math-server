@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+html, body, div, img, {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+h2 {
+  margin: 0;
+  margin-top: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  border: solid 1px black;
+  margin-top: 8px;
+}
+
+td, th {
+  text-align: left;
+  width: 100px;
+  border: solid 1px black;
+  padding-left: 4px;
+}
+
+.hogs {
+  display: flex;
+  margin-top: 20px;
+  width: 720px;
+}
+
+.hogs div {
+  flex: 1 1 auto;
+  padding: 5px;
+}
+
+.hogs img {
+  max-width: 100%;
+  height: auto;
+}
