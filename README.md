@@ -14,7 +14,7 @@ When your server is working correctly you should be able to visit http://localho
 
  There is no canonical solution so how ever you make the webpage work is a valid solution, though editing the client code is perhaps outside the spirit of the prompt. 
 
-The functionality you must implement implement are:
+The functionality you must implement:
 
 - [ ] Serve the client (`index.html`) and any other static assets the client needs.
 - [ ] Implement a route that responds to a `GET` request for the history of math operations.
