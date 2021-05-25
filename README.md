@@ -23,6 +23,7 @@ The functionality you must implement:
 ### Hint
 
 - There is a model called `History` which is provided to save and retrieve math operations. To simulate async interactions with a real database both methods return a promise.
+- Don't forget about tools like [CURL](https://flaviocopes.com/http-curl/) or [Postman](https://www.postman.com/downloads/) to test your routes as you build your server.
 
 # Server Routes
 
