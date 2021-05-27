@@ -54,7 +54,7 @@ Body
 
 | Parameter | Type | In  | Description |
 | --------- | ---- | --- | ----------- |
-| operation | string | path | String of math operation one of: 'add', 'subtract', 'multiply' or 'divide' |
+| operation | string | path | String of math operation. One of: 'add', 'subtract', 'multiply' or 'divide' |
 | a | number | body | First number for operation |
 | b | number | body | Second number for operation |
 
