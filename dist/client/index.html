@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Hedge Math</title>
-</head>
-<body>
-  <h1>Hedge Math</h1>
-  <form id="math-form">
-    <label> A
-      <input type="number" id="numA" required>
-    </label>
-    <label> B
-      <input type="number" id="numB" required>
-    </label>
-    <label> Operation
-      <select id="select-op">
-        <option value="add">Add</option>
-        <option value="subtract">Subtract</option>
-        <option value="multiply">Multiply</option>
-        <option value="divide">Divide</option>
-      </select>
-    </label>
-    <label>
-      <button type="submit">Calculate</button>
-    </label>
-  </form>
-  <div>
-    <h3>Answer: <span id="answer"></span></h3>
-  </div>
-  <div>
-    <h2>History</h2>
-    <table>
-      <thead>
-        <th>A</th>
-        <th>B</th>
-        <th>Operation</th>
-        <th>Answer</th>
-      </thead>
-      <tbody id="history-body">
-      </tbody>
-    </table>
-  </div>
-  <div class="hogs">
-    <div class="image">
-      <img src="/hogs/hedge-01.jpeg" alt="A Cute Hedgehog" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Hedge Math</title>
+  </head>
+  <body>
+    <h1>Hedge Math</h1>
+    <form id="math-form">
+      <label>
+        A
+        <input type="number" id="numA" required />
+      </label>
+      <label>
+        B
+        <input type="number" id="numB" required />
+      </label>
+      <label>
+        Operation
+        <select id="select-op">
+          <option value="add">Add</option>
+          <option value="subtract">Subtract</option>
+          <option value="multiply">Multiply</option>
+          <option value="divide">Divide</option>
+        </select>
+      </label>
+      <label>
+        <button type="submit">Calculate</button>
+      </label>
+    </form>
+    <div>
+      <h3>Answer: <span id="answer"></span></h3>
     </div>
-    <div class="image">
-      <img src="/hogs/hedge-02.jpeg" alt="A Cute Hedgehog" />
+    <div>
+      <h2>History</h2>
+      <table>
+        <thead>
+          <th>A</th>
+          <th>B</th>
+          <th>Operation</th>
+          <th>Answer</th>
+        </thead>
+        <tbody id="history-body"></tbody>
+      </table>
     </div>
-    <div class="image">
-      <img src="/hogs/hedge-03.jpeg" alt="A Cute Hedgehog" />
+    <div class="hogs">
+      <div class="image">
+        <img src="/hogs/hedge-01.jpeg" alt="A Cute Hedgehog" />
+      </div>
+      <div class="image">
+        <img src="/hogs/hedge-02.jpeg" alt="A Cute Hedgehog" />
+      </div>
+      <div class="image">
+        <img src="/hogs/hedge-03.jpeg" alt="A Cute Hedgehog" />
+      </div>
     </div>
-  </div>
-  <script src="index.js"></script>
-</body>
+    <a href="https://www.instagram.com/lionelthehog/">@lionelthehog</a>
+    <script src="index.js"></script>
+  </body>
 </html>

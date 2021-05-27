@@ -7,13 +7,14 @@ This repo has a simple client that allows the user to perform basic math operati
 Your task is to build the server to support this client. The server can be built by only writing code in the `/server/serve.js` file though you should feel free to create any additional files that will help you better organize your server code.
 
 When your server is working correctly you should be able to visit http://localhost:3000 and see a website that looks like this:
+
 ![Image of client once server is working correctly](./readme_images/final-client.png)
 
 ## Instructions
 
  There is no canonical solution so how ever you make the webpage work is a valid solution, though editing the client code is perhaps outside the spirit of the prompt. 
 
-The functionality you must implement implement are:
+The functionality you must implement:
 
 - [ ] Serve the client (`index.html`) and any other static assets the client needs.
 - [ ] Implement a route that responds to a `GET` request for the history of math operations.
@@ -21,7 +22,8 @@ The functionality you must implement implement are:
 
 ### Hint
 
-- There is a model called `History` which is provided to save and retrieve math operations. To simulate async interactions with a real database both methods return a promise.
+- There is a model called `History` which you can import and use to save and retrieve math operations. To simulate async interactions with a real database both methods return a promise.
+- Don't forget about tools like [CURL](https://flaviocopes.com/http-curl/) or [Postman](https://www.postman.com/downloads/) to test your routes as you build your server.
 
 # Server Routes
 
@@ -52,7 +54,7 @@ Body
 
 | Parameter | Type | In  | Description |
 | --------- | ---- | --- | ----------- |
-| operation | string | path | String of math operation ['add', 'subtract', 'multiply', 'divide'] |
+| operation | string | path | String of math operation one of: 'add', 'subtract', 'multiply' or 'divide' |
 | a | number | body | First number for operation |
 | b | number | body | Second number for operation |
 
