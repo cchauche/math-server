@@ -22,7 +22,7 @@ The functionality you must implement:
 
 ### Hint
 
-- There is a model called `History` which is provided to save and retrieve math operations. To simulate async interactions with a real database both methods return a promise.
+- There is a model called `History` which you can import and use to save and retrieve math operations. To simulate async interactions with a real database both methods return a promise.
 - Don't forget about tools like [CURL](https://flaviocopes.com/http-curl/) or [Postman](https://www.postman.com/downloads/) to test your routes as you build your server.
 
 # Server Routes
@@ -54,7 +54,7 @@ Body
 
 | Parameter | Type | In  | Description |
 | --------- | ---- | --- | ----------- |
-| operation | string | path | String of math operation ['add', 'subtract', 'multiply', 'divide'] |
+| operation | string | path | String of math operation one of: 'add', 'subtract', 'multiply' or 'divide' |
 | a | number | body | First number for operation |
 | b | number | body | Second number for operation |
 
