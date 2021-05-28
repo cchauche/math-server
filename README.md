@@ -4,7 +4,7 @@
 
 This repo has a simple client that allows the user to perform basic math operations on two numbers. As the user performs operations a table containing the history of math operations gets populated. The client code is located in the `dist/` folder.
 
-Your task is to build the server to support this client. The server can be built by only writing code in the `/server/serve.js` file though you should feel free to create any additional files that will help you better organize your server code.
+Your task is to build the server to support this client. The server can be built by only writing code in the `/server/server.js` file though you should feel free to create any additional files that will help you better organize your server code.
 
 When your server is working correctly you should be able to visit http://localhost:3000 and see a website that looks like this:
 
@@ -54,7 +54,7 @@ Body
 
 | Parameter | Type | In  | Description |
 | --------- | ---- | --- | ----------- |
-| operation | string | path | String of math operation one of: 'add', 'subtract', 'multiply' or 'divide' |
+| operation | string | path | String of math operation. One of: 'add', 'subtract', 'multiply' or 'divide' |
 | a | number | body | First number for operation |
 | b | number | body | Second number for operation |
 

@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const History = require('../models/History.js');
+const {save, getAll} = require('../models/History.js');
 const parseAB = require('./middleware/parseAB.js');
 
 const app = express();
@@ -12,7 +12,7 @@ app.use(
 );
 
 app.get('/history', (req, res) => {
-  History.getAll()
+  getAll()
     .then((data) => {
       res.status(200).json({ data });
     })
@@ -35,7 +35,7 @@ app.post('/math/:operation', parseAB, (req, res) => {
   } else if (operation === 'divide') {
     answer = a / b;
   }
-  History.save(a, b, operation, answer)
+  save(a, b, operation, answer)
     .then(() => {
       res.status(201).json({ answer });
     })

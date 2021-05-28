@@ -6,6 +6,8 @@
 class History {
   constructor() {
     this.storage = [];
+    this.save = this.save.bind(this);
+    this.getAll = this.getAll.bind(this);
   }
 
   /**
